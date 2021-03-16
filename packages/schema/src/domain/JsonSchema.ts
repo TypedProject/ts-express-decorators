@@ -716,15 +716,6 @@ export class JsonSchema extends Map<string, any> implements NestedGenerics {
     return this;
   }
 
-  addTypes(...types: any[]) {
-    types = [].concat(this.get("type")).concat(types as never);
-    types = uniq(types).map(getJsonType);
-
-    this.type(types);
-    // @ts-ignore
-    delete this._target;
-  }
-
   any(...types: any[]) {
     types = uniq(types.length ? types : ["integer", "number", "string", "boolean", "array", "object", "null"]).map(getJsonType);
 
