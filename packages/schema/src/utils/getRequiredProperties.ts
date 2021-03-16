@@ -1,5 +1,5 @@
-import {Hooks, uniq} from "@tsed/core";
-import {JsonSchemaOptions} from "@tsed/schema";
+import {uniq} from "@tsed/core";
+import type {JsonSchemaOptions} from "../interfaces/JsonSchemaOptions";
 import type {JsonSchema} from "../domain/JsonSchema";
 import {alterRequiredGroups} from "../hooks/alterRequiredGroups";
 
